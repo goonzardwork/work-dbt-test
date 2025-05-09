@@ -7,8 +7,13 @@ macro-paths: ["macros"]
 test-paths: ["tests"]
 
 models:
-  fund_dbt_project:
-    staging:
-      # Drop the existing table and create a new one
-      +materialized: table
-      +schema: staging
+  staging:
+    # Drop the existing table and create a new one
+    +materialized: table
+    +schema: staging
+  marts:
+    # Incrementally update the table
+    +materialized: incremental
+
+    fund:         # <= Match the folder: models/marts/fund
+      +schema: bi # <= Match the schema.

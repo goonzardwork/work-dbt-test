@@ -1,6 +1,7 @@
 version: 2
 
 sources:
+  # 펀드 마스터 테이블 소스
   - name: fund_master_igisam
     schema: igisam
     tables:
@@ -18,3 +19,14 @@ sources:
     tables:
       - name: mdbmcodef
         description: "코드 → 명칭 마스터 테이블"
+  # 펀드 원장 소스
+  - name: fund_ledger_igisam
+    schema: igisam
+    tables:
+      - name: accd
+        description: "펀드 계정 코드 정보"
+      - name: fngl
+        description: "펀드 총계정 원장 테이블"
+      - name: mtfngl
+        description: "해외 기준가 펀드 총계정 원장 테이블"
+  

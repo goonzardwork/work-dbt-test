@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: mart_fund_ledger_11304
+    description: "Fund ledger value by fund, account, and date with directional logic applied"
+    columns:
+      - name: proc_dt
+        description: "Processing date"
+      - name: fund_cd
+        description: "Fund code"
+      - name: acct_cd
+        description: "Account code"
+      - name: value
+        description: "Computed balance value using DC logic"

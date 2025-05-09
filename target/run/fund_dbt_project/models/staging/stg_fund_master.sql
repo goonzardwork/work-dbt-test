@@ -1,13 +1,8 @@
 
-  
+  create view "postgres"."bi"."stg_fund_master__dbt_tmp"
     
-
-  create  table "postgres"."bi_staging"."stg_fund_master__dbt_tmp"
-  
-  
-    as
-  
-  (
+    
+  as (
     with afn as (
     select * from "postgres"."igisbiz"."afndbascm"
 ),
@@ -264,4 +259,3 @@ left join fn
 left join "postgres"."igisam"."mtfn" mtfn
     on afn.FUND_CD = mtfn."FUND_CD"
   );
-  

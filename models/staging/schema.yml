@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: fund_master_igisam
+    schema: igisam
+    tables:
+      - name: fn
+        description: "펀드 마스터 테이블"
+      - name: mtfn
+        description: "해외 기준가 펀드 마스터 테이블"
+  - name: fund_master_igisbiz
+    schema: igisbiz
+    tables:
+      - name: afndbascm
+        description: "펀드 기본정보"
+  - name: code_master_igisdms
+    schema: igisdms
+    tables:
+      - name: mdbmcodef
+        description: "코드 → 명칭 마스터 테이블"

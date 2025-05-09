@@ -1,0 +1,14 @@
+name: fund_dbt_project
+version: 1.0.0
+profile: fund_dbt
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+models:
+  fund_dbt_project:
+    staging:
+      # Drop the existing table and create a new one
+      +materialized: table
+      +schema: staging
